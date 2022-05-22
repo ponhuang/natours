@@ -5,7 +5,7 @@
     position: absolute;
     width: 55%;
     border-radius: 2px;
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    box-shadow: $box-shadow-big;
     transition: all 0.2s;
     outline-offset: 0.5rem;
     z-index: 10;
