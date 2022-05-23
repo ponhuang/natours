@@ -83,3 +83,25 @@
     box-shadow: $box-shadow-small-click;
   }
 }
+
+.btn-nav {
+  background-color: $color-white;
+  color: $color-primary;
+  cursor: pointer;
+  padding: 1.3rem 1.5rem;
+  border: none;
+  border-radius: 100%;
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+  z-index: 9999;
+
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+
+    &[name="close-outline"] {
+      display: none;
+    }
+  }
+}

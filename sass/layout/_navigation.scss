@@ -1,0 +1,78 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba($color-white, 0.7);
+  z-index: 900;
+
+  transform: translateX(100%);
+  transition: all 0.5s;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  &__nav {
+    @include absCenter;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 3rem;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      padding: 0.5rem 2rem;
+      text-decoration: none;
+      color: $color-primary;
+      background-image: linear-gradient(
+        120deg,
+        transparent 50%,
+        $color-primary-dark 50%
+      );
+      background-size: 220%;
+      transition: all 0.4s;
+      span {
+        display: inline-block;
+        margin-right: 2rem;
+      }
+    }
+
+    &:hover,
+    &:active {
+      color: $color-white;
+      background-position: 100%;
+      transform: translateX(1rem);
+    }
+  }
+}
+
+.nav-open .navigation {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.nav-open .btn-nav__icon[name="close-outline"] {
+  display: block;
+}
+
+.nav-open .btn-nav__icon[name="menu-outline"] {
+  display: none;
+}
+
+// ps. the way to make the menu work, have to set the nav-open in its first container, and let the rest elements be inside this container.
