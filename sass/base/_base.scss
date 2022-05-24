@@ -6,10 +6,31 @@
 }
 
 html {
+  // base on 1rem = 10px , 10px / 16px = 62.5%
   font-size: 62.5%;
+
+  // base on 1rem = 9px
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  // base on 1rem = 8px
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  // base on 1rem = 12px
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
 }
 
 body {
   box-sizing: border-box;
   overflow-x: hidden;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }

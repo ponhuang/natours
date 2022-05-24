@@ -6,9 +6,25 @@
 }
 .u-margin-bottom-big {
   margin-bottom: 6rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 4rem !important;
+  }
 }
 .u-margin-bottom-huge {
   margin-bottom: 8rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 7rem !important;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-margin-top-small {

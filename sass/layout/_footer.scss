@@ -3,6 +3,11 @@
   background-color: $color-gray-dark-3;
   font-size: 1.4rem;
   padding: 15rem 0;
+  text-align: center;
+
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
 
   &__logo-box {
     text-align: center;
@@ -17,6 +22,11 @@
     border-top: 1px solid $color-gray-dark;
     padding-top: 2rem;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -51,9 +61,15 @@
   }
 
   &__copyright {
+    display: inline-block;
     border-top: 1px solid $color-gray-dark;
     padding: 2rem;
     width: 80%;
     float: right;
+
+    @include respond(tab-port) {
+      width: 100%;
+      flaot: none;
+    }
   }
 }
