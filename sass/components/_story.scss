@@ -26,8 +26,9 @@
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg);
+    transform: translateX(-3rem) skewX(12.01deg);
     position: relative;
+    overflow: hidden;
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0deg);

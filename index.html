@@ -106,11 +106,27 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 22vw, (max-width: 37.5em) 25vw, 300px"
                 src="img/nat-1-large.jpg"
                 alt="Photo 1"
                 class="composition__photo composition__photo--p1"
               />
               <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 22vw, (max-width: 37.5em) 25vw, 300px"
+                src="img/nat-2-large.jpg"
+                alt="Photo 2"
+                class="composition__photo composition__photo--p2"
+              />
+              <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 22vw, (max-width: 37.5em) 25vw, 300px"
+                src="img/nat-3-large.jpg"
+                alt="Photo 3"
+                class="composition__photo composition__photo--p3"
+              />
+              <!-- <img
                 src="img/nat-2-large.jpg"
                 alt="Photo 2"
                 class="composition__photo composition__photo--p2"
@@ -119,7 +135,7 @@
                 src="img/nat-3-large.jpg"
                 alt="Photo 3"
                 class="composition__photo composition__photo--p3"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -306,7 +322,9 @@
           <div class="story">
             <figure class="story__shape">
               <img
-                src="img/nat-8.jpg"
+                srcset="img/nat-8-small.jpg 600w, img/nat-8-medium.jpg 1200w"
+                sizes="(max-width: 56.25em)"
+                src="img/nat-8-medium.jpg"
                 alt="People on the tour"
                 class="story__img"
               />
@@ -330,7 +348,9 @@
           <div class="story">
             <figure class="story__shape">
               <img
-                src="img/nat-9.jpg"
+                srcset="img/nat-9-small.jpg 600w, img/nat-9-medium.jpg 1200w"
+                sizes="(max-width: 56.25em)"
+                src="img/nat-9-medium.jpg"
                 alt="
                 Person on a tour"
                 class="story__img"
@@ -426,11 +446,21 @@
 
     <footer class="footer">
       <div class="footer__logo-box u-margin-bottom-huge">
-        <img
-          src="img/logo-green-2x.png"
-          alt="Natours Logo"
-          class="footer__logo"
-        />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            src="img/logo-green-2x.png"
+            alt="Natours Logo"
+            class="footer__logo"
+          />
+        </picture>
       </div>
 
       <div class="row">

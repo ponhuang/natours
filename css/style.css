@@ -358,11 +358,20 @@ body {
     -webkit-lip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #5bc4d2, #1399ac), url(../img/nat-5.jpg); }
+      background-image: linear-gradient(to right bottom, #5bc4d2, #1399ac), url(../img/nat-5-small.jpg); }
+      @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        .card__picture--1 {
+          background-image: linear-gradient(to right bottom, #5bc4d2, #1399ac), url(../img/nat-5.jpg); } }
     .card__picture--2 {
-      background-image: linear-gradient(to right bottom, #f9d199, #f08c00), url(../img/nat-6.jpg); }
+      background-image: linear-gradient(to right bottom, #f9d199, #f08c00), url(../img/nat-6-small.jpg); }
+      @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        .card__picture--2 {
+          background-image: linear-gradient(to right bottom, #f9d199, #f08c00), url(../img/nat-6.jpg); } }
     .card__picture--3 {
-      background-image: linear-gradient(to right bottom, #74c0fc, #1665ab), url(../img/nat-7.jpg); }
+      background-image: linear-gradient(to right bottom, #74c0fc, #1665ab), url(../img/nat-7-small.jpg); }
+      @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        .card__picture--3 {
+          background-image: linear-gradient(to right bottom, #74c0fc, #1665ab), url(../img/nat-7.jpg); } }
   .card__heading {
     font-size: 2.4rem;
     font-weight: 400;
@@ -472,8 +481,9 @@ body {
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg);
-    position: relative; }
+    transform: translateX(-3rem) skewX(12.01deg);
+    position: relative;
+    overflow: hidden; }
     @media (max-width: 37.5em) {
       .story__shape {
         transform: translateX(-3rem) skewX(0deg); } }
@@ -519,91 +529,89 @@ body {
     height: 100%;
     object-fit: cover; }
 
-.form__group:not(:last-child) {
-  margin-bottom: 2rem; }
-
-.form__input {
-  display: block;
-  font-family: inherit;
-  color: inherit;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 90%;
-  border-bottom: 3px solid transparent;
-  transition: all 0.2s; }
-  @media (max-width: 56.25em) {
-    .form__input {
-      width: 70%; } }
-  .form__input:focus {
-    outline: none;
-    border-bottom: 3px solid #44bbcc;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3); }
-  .form__input:focus:invalid {
-    border-bottom: 3px solid #f3a333; }
-  .form__input::-webkit-input-placeholder {
-    color: #bbb; }
-
-.form__label {
-  display: inline-block;
-  font-size: 1.3rem;
-  font-family: inherit;
-  color: #999;
-  font-weight: 500;
-  margin-left: 2rem;
-  margin-top: 0.5rem;
-  transition: all 0.3s; }
-
-.form__input:placeholder-shown + .form__label {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4rem); }
-
-.form__radio-group {
-  display: inline-block;
-  width: 40%; }
-  @media (max-width: 56.25em) {
-    .form__radio-group {
-      width: 100%;
-      margin-bottom: 2rem; } }
-
-.form__radio-input {
-  display: none; }
-
-.form__radio-label {
-  font-size: 1.6rem;
-  cursor: pointer;
-  padding-left: 5rem;
-  position: relative; }
-  @media (max-width: 56.25em) {
-    .form__radio-label {
-      width: 100%; } }
-
-.form__radio-button {
-  display: inline-block;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  border: 5px solid #44bbcc;
-  position: absolute;
-  top: -0.8rem;
-  left: 0; }
-  .form__radio-button::after {
-    content: "";
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background-color: #44bbcc;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.form {
+  width: 100%; }
+  .form__group:not(:last-child) {
+    margin-bottom: 2rem; }
+  .form__input {
+    display: block;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 90%;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent; }
+    @media (max-width: 75em) {
+      .form__input {
+        width: 100%; } }
+    @media (max-width: 56.25em) {
+      .form__input {
+        width: 100%; } }
+    .form__input:focus {
+      outline: none;
+      border-bottom: 3px solid #44bbcc;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3); }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #f3a333; }
+    .form__input::-webkit-input-placeholder {
+      color: #bbb; }
+  .form__label {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-family: inherit;
+    color: #999;
+    font-weight: 500;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    transition: all 0.3s; }
+  .form__input:placeholder-shown + .form__label {
     opacity: 0;
-    transition: opacity 0.2s; }
-
-.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
-  opacity: 1; }
+    visibility: hidden;
+    transform: translateY(-4rem); }
+  .form__radio-group {
+    display: inline-block;
+    width: 40%; }
+    @media (max-width: 56.25em) {
+      .form__radio-group {
+        width: 100%;
+        margin-bottom: 2rem; } }
+  .form__radio-input {
+    display: none; }
+  .form__radio-label {
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding-left: 5rem;
+    position: relative; }
+    @media (max-width: 56.25em) {
+      .form__radio-label {
+        width: 100%; } }
+  .form__radio-button {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 5px solid #44bbcc;
+    position: absolute;
+    top: -0.8rem;
+    left: 0; }
+    .form__radio-button::after {
+      content: "";
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: #44bbcc;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.2s; }
+  .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+    opacity: 1; }
 
 .popup {
   width: 100%;
@@ -633,6 +641,9 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.3);
     transition: all 0.4s 0.2s; }
+    @media (max-width: 75em) {
+      .popup__content {
+        display: block; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -642,11 +653,19 @@ body {
   .popup__left {
     width: 33.3333%;
     display: table-cell; }
+    @media (max-width: 75em) {
+      .popup__left {
+        display: table;
+        width: 100%; } }
   .popup__right {
     width: 66.6667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media (max-width: 75em) {
+      .popup__right {
+        display: table;
+        width: 100%; } }
   .popup__text {
     font-size: 1.4rem;
     column-count: 2;
@@ -667,12 +686,15 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(45deg, rgba(91, 196, 210, 0.8), rgba(19, 153, 172, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(45deg, rgba(91, 196, 210, 0.8), rgba(19, 153, 172, 0.8)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (mix-width: 125em) {
+    .header {
+      background-image: linear-gradient(45deg, rgba(91, 196, 210, 0.8), rgba(19, 153, 172, 0.8)), url(../img/hero.jpg); } }
   @media (max-width: 56.25em) {
     .header {
       height: 85vh;
@@ -854,11 +876,14 @@ body {
       margin-top: -15vh; } }
 
 .section-feature {
-  background-image: linear-gradient(to right, rgba(91, 196, 210, 0.8), rgba(19, 153, 172, 0.8)), url(../img/nat-4.jpg);
+  background-image: linear-gradient(to right, rgba(91, 196, 210, 0.8), rgba(19, 153, 172, 0.8)), url(../img/nat-4-small.jpg);
   background-size: cover;
   padding: 20rem 0;
   margin-top: -15rem;
   transform: skewY(-7deg); }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .section-feature {
+      background-image: linear-gradient(to right, rgba(91, 196, 210, 0.8), rgba(19, 153, 172, 0.8)), url(../img/nat-4.jpg); } }
   .section-feature > * {
     transform: skewY(7deg); }
   @media (max-width: 56.25em) {
@@ -890,23 +915,26 @@ body {
 
 .book {
   background-size: 100%;
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../img/nat-10-small.jpg);
   border-radius: 3px;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   @media (max-width: 75em) {
     .book {
       background-size: cover;
-      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 65%, transparent 65%), url(../img/nat-10.jpg); } }
-  @media (max-width: 37.5em) {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 65%, transparent 65%), url(../img/nat-10-small.jpg); } }
+  @media (max-width: 56.25em) {
     .book {
-      background-size: cover;
-      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url(../img/nat-10.jpg); } }
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url(../img/nat-10-small.jpg); } }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../img/nat-10.jpg); } }
   .book__form {
     width: 50%;
-    padding: 6rem; }
+    padding: 6rem;
+    box-sizing: border-box; }
     @media (max-width: 75em) {
       .book__form {
-        width: 65%; } }
-    @media (max-width: 37.5em) {
+        width: 50%; } }
+    @media (max-width: 56.25em) {
       .book__form {
         width: 100%; } }
